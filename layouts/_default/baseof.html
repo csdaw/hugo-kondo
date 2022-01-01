@@ -4,10 +4,15 @@
     {{ partial "head" . }}
   </head>
   <body>
-    {{ partial "header" . }}
-    
-    {{ block "main" . }}{{ end }}
-    
-    {{ partial "footer" . }}
+    <div class="container">
+      <input type="checkbox" id="dark-mode-toggle">
+      <div class="outer">
+        <div class="content">
+          {{ partial "header" . }}
+          {{ block "main" . }}{{ end }}
+          {{ partial "footer" . }}
+        </div>
+      </div>
+    </div>
   </body>
 </html>

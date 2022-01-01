@@ -1,8 +1,15 @@
 <nav>
-  <ul class="navbar">
-    {{ range .Site.Menus.main }}
-      <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-    {{ end }}
-  </ul>
-  <hr>
+  <div class="navbar">
+    <ul class="navlinks">
+      {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+    <label for="dark-mode-toggle">
+      <span class="toggle-bg">
+        <span class="toggle-circle"></span>
+      </span>
+    </label>
+    <hr>
+  </div>
 </nav>
