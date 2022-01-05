@@ -1,9 +1,4 @@
-body {
-  margin: 0px;
-  height: 100vh;
-}
-
-/* dark mode */
+/* light/dark mode colours */
 :root {
   --bgcolor: rgb(250, 250, 250);
   --fontcolor: rgb(26, 26, 26);
@@ -36,6 +31,51 @@ body {
   }
 }
 
+/* general */
+body {
+  margin: 0px;
+  height: 100vh;
+}
+
+h1, h2 {
+  font-family: "Trebuchet MS", sans-serif;
+  letter-spacing: 1px;
+}
+
+p {
+  font-family: Times, serif;
+  letter-spacing: 0.4px;
+  color: var(--fontcolor);
+  transition: color 0.2s ease-in-out;
+}
+
+a {
+  font-family: Times, serif;
+}
+
+a:link {
+  text-decoration: none;
+  color: var(--fontcoloralt);
+  transition: color 0.2s ease-in-out;
+}
+
+a:visited {
+  text-decoration: none;
+  color: var(--fontcoloralt);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--linkcolor);
+  transition: all 0s ease-in-out;
+}
+
+a:active {
+  text-decoration: underline;
+  color: var(--linkcolor);
+}
+
+/* light/dark mode toggle */
 .outer {
   min-height: 100vh;
   background: var(--bgcolor);
@@ -109,11 +149,8 @@ body {
 } 
 
 header h1 {
-  font-family: "Trebuchet MS", sans-serif;
-  font-weight: normal;
   font-size: 2rem;
   margin: 10px 0px;
-  letter-spacing: 1px;
 }
 
 header a {
@@ -122,31 +159,34 @@ header a {
 }
 
 header p {
-  font-family: Georgia, serif;
+  font-family: Georgia, Times, serif;
   font-size: 1.1rem;
-  color: var(--fontcolor);
-  transition: color 0.2s ease-in-out;
   letter-spacing: -1px;
 }
 
-a:link {
-  text-decoration: none;
-  color: var(--fontcoloralt);
-  transition: color 0.2s ease-in-out;
+/* homepage */
+
+.latest-posts h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0px;
 }
 
-a:visited {
-  text-decoration: none;
-  color: var(--fontcoloralt);
+.latest-posts ul {
+  list-style: none;
+  padding-left: 0px;
 }
 
-a:hover {
-  text-decoration: underline;
+.latest-posts a:link {
+  font-size: 1.3rem;
+  color: var(--fontcolor);
+}
+
+.latest-posts a:hover, a:active {
   color: var(--linkcolor);
-  transition: all 0s ease-in-out;
 }
 
-a:active {
-  text-decoration: underline;
-  color: var(--linkcolor);
+.latest-posts .date {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--fontcoloralt);
 }
