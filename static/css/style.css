@@ -72,7 +72,9 @@ body {
 }
 
 #dark-mode-toggle:checked ~ .outer .toggle-circle {
-  margin-left: 21px;
+  height: 15px;
+  width: 15px;
+  margin-left: 22px;
   background: var(--bgcolor);
 }
 
@@ -96,14 +98,39 @@ body {
   vertical-align: top;
 } 
 
-.navbar, footer {
-  text-align: center;
+header h1 {
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: normal;
+  font-size: 2rem;
+  margin: 10px 0px;
+  letter-spacing: 1px;
 }
 
-.title {
-  font-size: 1.1em;
+header a {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 1.1rem;
 }
 
-footer a {
+header p {
+  font-family: Georgia, serif;
+  font-size: 1.2rem;
+}
+
+a:link {
   text-decoration: none;
+  color: var(--fontcolor);
+  transition: color 0.2s ease-in-out;
+}
+
+a:visited {
+  text-decoration: none;
+  color: var(--fontcolor);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
 }

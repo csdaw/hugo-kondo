@@ -1,15 +1,18 @@
-<nav>
-  <div class="navbar">
-    <ul class="navlinks">
-      {{ range .Site.Menus.main }}
-        <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-      {{ end }}
-    </ul>
-    <label for="dark-mode-toggle">
-      <span class="toggle-bg">
-        <span class="toggle-circle"></span>
-      </span>
-    </label>
-    <hr>
-  </div>
-</nav>
+<header>
+  <h1>{{ .Site.Title }}</h1>
+
+  <nav>
+    <div class="navbar">
+      <ul class="navlinks">
+        {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li><p style="display:inline"> |</p>
+        {{ end }}
+      </ul>
+      <label for="dark-mode-toggle">
+        <span class="toggle-bg">
+          <span class="toggle-circle"></span>
+        </span>
+      </label>
+    </div>
+  </nav>
+</header>
