@@ -4,6 +4,11 @@
   --fontcolor: rgb(26, 26, 26);
   --fontcoloralt: rgb(88, 88, 90);
   --linkcolor: #e33;
+  --body-font-size: 1.3rem;
+  --line-height: 2rem; 
+  --h1-font-size: 2rem; 
+  --h2-font-size: 1.5rem; 
+  --small-font-size: 1.1rem; 
 }
 
 @media (prefers-color-scheme: dark) {
@@ -131,11 +136,35 @@ a:active {
 }
 
 /* header and footer */
+header {
+  margin: calc(1.5 * var(--line-height)) 0;
+}
+
+header h1 {
+  font-size: var(--h1-font-size);
+  margin: 0;
+}
+
+header a {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: var(--small-font-size);
+}
+
+header p {
+  font-family: Georgia, Times, serif;
+  font-size: var(--small-font-size);
+  letter-spacing: -1px;
+}
+
+nav {
+  font-size: var(--small-font-size);
+  margin-top: calc(0.25 * var(--line-height));
+}
+
 .navbar ul {
   display: inline-block;
-  padding: 0px;
-  margin-top: 4px;
-  margin-bottom: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 .navbar li {
@@ -145,38 +174,29 @@ a:active {
 .navbar label[for=dark-mode-toggle] {
   display: inline-block;
   vertical-align: top;
-  margin: 6px 0px;
+  margin: 2px 0;
 } 
 
-header h1 {
-  font-size: 2rem;
-  margin: 10px 0px;
-}
-
-header a {
-  font-family: "Trebuchet MS", sans-serif;
-  font-size: 1.05rem;
-}
-
-header p {
-  font-family: Georgia, Times, serif;
-  font-size: 1.1rem;
-  letter-spacing: -1px;
-}
-
 /* homepage */
+
 .latest-posts h2 {
-  font-size: 1.3rem;
-  margin-bottom: 0px;
+  margin: calc(2.5 * var(--line-height)) 0 0 0;
+  font-size: var(--h2-font-size);
 }
 
 .latest-posts ul {
   list-style: none;
   padding-left: 0px;
+  margin: 0 0 var(--line-height) 0;
+}
+
+.latest-posts li {
+  margin-top: calc(0.75 * var(--line-height));
+  line-height: 1.4;
 }
 
 .latest-posts a:link {
-  font-size: 1.3rem;
+  font-size: var(--body-font-size);
   color: var(--fontcolor);
 }
 
@@ -186,7 +206,12 @@ header p {
 
 .latest-posts .date {
   display: block;
-  font-size: 1.1rem;
+  font-size: var(--small-font-size);
   color: var(--fontcoloralt);
   transition: color 0.2s ease-in-out;
+}
+
+.latest-posts a.internal-link {
+  font-size: var(--small-font-size);
+  line-height: 1.4;
 }
