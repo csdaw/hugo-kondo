@@ -175,7 +175,8 @@ nav {
 .navbar li {
   display: border-box;
   padding: 0 calc(0.18 * var(--line-height));
-  /*margin-right: calc(0.25 * var(--line-height));*/}
+  color: var(--fontcoloralt);
+}
 
 .navbar li.navlink-border {
   border-right-color: var(--fontcolor);
