@@ -1,6 +1,6 @@
 <footer>
-  <a href="#top">Top ↑</a>
-  <a href="/license/">License</a>
-  <a href="{{ .Site.Params.sourceURL }}">Source</a>
-  <a href="/contact/">Contact</a>
+  {{ if .Site.Params.gototop }}
+    <a href="#top">Top ↑</a>
+  {{ end }}
+  {{ with .Site.Params.footer }}{{ . | markdownify }}{{ end }}
 </footer>

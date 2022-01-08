@@ -193,6 +193,10 @@ footer a {
   margin-left: calc(0.25 * var(--line-height));
 }
 
+footer p {
+  color: var(--fontcoloralt);
+  transition: color 0.2s ease-in-out;
+}
 /* homepage */
 
 .latest-posts h2 {
