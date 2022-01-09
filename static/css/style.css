@@ -7,7 +7,7 @@
   --bordercolor: rgb(230, 230, 230);
   --body-font-size: 1.3rem;
   --line-height: 2rem; 
-  --h1-font-size: 2rem; 
+  --h1-font-size: 1.8rem; 
   --h2-font-size: 1.5rem; 
   --small-font-size: 1.1rem; 
 }
@@ -46,9 +46,21 @@ body {
   height: 100vh;
 }
 
-h1, h2 {
+h1 {
   font-family: "Trebuchet MS", sans-serif;
+  font-weight: normal;
+  font-size: var(--h1-font-size);
   letter-spacing: 1px;
+  margin: 0;
+  padding-bottom: calc(0.25 * var(--line-height));
+  border-bottom: 1px solid var(--fontcoloralt);
+  transition: border-color 0.2s ease-in-out;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: var(--h2-font-size);
+  letter-spacing: 0.6px;
 }
 
 p {
@@ -144,24 +156,12 @@ header {
   margin: calc(1.5 * var(--line-height)) 0;
 }
 
-header h1 {
-  font-size: var(--h1-font-size);
-  margin: 0;
-}
-
 header a {
   font-family: "Trebuchet MS", sans-serif;
-  font-size: var(--small-font-size);
-}
-
-header p {
-  font-family: Georgia, Times, serif;
-  font-size: var(--small-font-size);
-  letter-spacing: -1px;
+  font-size: calc(0.9 * var(--small-font-size));
 }
 
 nav {
-  font-size: var(--small-font-size);
   margin-top: calc(0.25 * var(--line-height));
 }
 
@@ -194,10 +194,7 @@ nav {
 
 /* footer */
 footer {
-  border-top: 1px solid var(--bordercolor);
-  padding: 1em 0 calc(3 * var(--line-height)) 0;
   margin: calc(2.5 * var(--line-height)) 0 0 0;
-  transition: border-color 0.2s ease-in-out;
 }
 
 footer a {
@@ -213,6 +210,7 @@ footer p {
 .latest-posts h2 {
   margin: calc(2.5 * var(--line-height)) 0 0 0;
   font-size: var(--h2-font-size);
+  font-family: Times, serif;
 }
 
 .latest-posts ul {

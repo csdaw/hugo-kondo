@@ -1,5 +1,9 @@
 <header>
-  <h1>{{ .Site.Title }}</h1>
+  {{ if .IsHome }}
+    <h1>{{ .Site.Title }}</h1>
+  {{ else }}
+    <h1>{{ .Title }}</h1>
+  {{ end }}
 
   <nav>
     <div class="navbar">
