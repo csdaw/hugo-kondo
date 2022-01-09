@@ -14,8 +14,7 @@
             {{ else }}
             class="navlink-border"
             {{ end }}
-            href="{{ .URL | relURL }}"
-          ><a>{{ .Name }}</a></li>
+          ><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
         {{ end }}
         {{ if .Site.Params.darkmodetoggle }}
           <li class="toggle-box">
