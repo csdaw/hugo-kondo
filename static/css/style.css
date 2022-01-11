@@ -262,14 +262,19 @@ nav {
 
 .blog-article-meta li {
   color: var(--fontcoloralt);
-  padding: 0 calc(0.18 * var(--line-height));
-  transition: color 0.2s ease-in-out,
-              border-color 0.2s ease-in-out;
 }
 
-.blog-article-meta li.blog-author {
+.blog-article-meta li:first-child {
+  padding: 0 calc(0.18 * var(--line-height)) 0 0;
+}
+
+.blog-article-meta li:not(:first-child) {
+  padding: 0 calc(0.18 * var(--line-height));
+}
+
+.blog-article-meta li:not(:last-child) {
   border-right-color: var(--fontcolor);
   border-right-style: solid;
   border-right-width: 1px;
+  transition: border-color 0.2s ease-in-out;
 }
-

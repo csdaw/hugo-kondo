@@ -5,7 +5,7 @@
       {{ with .Params.author }}<li class="blog-author"><a href="/">{{ . }}</a></li>{{ end }}
       {{ if .Params.date }}<li><span class="blog-date">{{ $.Date.Format "2 January 2006" }}</span></li>{{ end }}
       {{ if .Site.Params.darkmodetoggle }}
-        <li class="toggle-box">
+        <li>
           <label for="dark-mode-toggle">
             <span class="toggle-bg">
               <span class="toggle-circle"></span>
