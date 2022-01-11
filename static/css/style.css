@@ -168,21 +168,21 @@ nav {
 
 .navbar li {
   display: border-box;
-  padding: 0 calc(0.18 * var(--line-height));
   color: var(--fontcoloralt);
 }
 
-.navbar li.navlink-border {
+.navbar li:first-child {
+  padding: 0 calc(0.18 * var(--line-height)) 0 0;
+}
+
+.navbar li:not(:first-child) {
+  padding: 0 calc(0.18 * var(--line-height));
+}
+
+.navbar li:not(:last-child) {
   border-right-color: var(--fontcolor);
   border-right-style: solid;
   border-right-width: 1px;
-  transition: border-color 0.2s ease-in-out;
-}
-
-li.toggle-box {
-  border-left-color: var(--fontcolor);
-  border-left-style: solid;
-  border-left-width: 1px;
   transition: border-color 0.2s ease-in-out;
 }
 
