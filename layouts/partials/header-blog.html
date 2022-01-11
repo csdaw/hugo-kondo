@@ -2,8 +2,9 @@
   <h1>{{ .Title }}</h1>
   <div class="blog-article-meta">
     <ul>
-      {{ with .Params.author }}<li class="blog-author"><a href="/">{{ . }}</a></li>{{ end }}
+      {{ with .Params.author }}<li class="blog-author"><a href="/about/">{{ . }}</a></li>{{ end }}
       {{ if .Params.date }}<li><span class="blog-date">{{ $.Date.Format "2 January 2006" }}</span></li>{{ end }}
+      <li><a href="/blog/">Blog</a></li>
       {{ if .Site.Params.darkmodetoggle }}
         <li>
           <label for="dark-mode-toggle">

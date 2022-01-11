@@ -260,6 +260,8 @@ nav {
 
 .blog-article-meta li {
   color: var(--fontcoloralt);
+  transition: color 0.2s ease-in-out,
+              border-color 0.2s ease-in-out;
 }
 
 .blog-article-meta li:first-child {
@@ -274,5 +276,4 @@ nav {
   border-right-color: var(--fontcolor);
   border-right-style: solid;
   border-right-width: 1px;
-  transition: border-color 0.2s ease-in-out;
 }
