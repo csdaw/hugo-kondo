@@ -206,41 +206,39 @@ footer p {
   font-size: var(--h2-font-size);
 }
 
-.latest-posts ul {
+.latest-posts a.internal-link {
+  font-size: var(--small-font-size);
+  line-height: calc(0.7 * var(--line-height));
+}
+
+ul.post-list {
   list-style: none;
   padding-left: 0px;
   margin: 0 0 var(--line-height) 0;
 }
 
-.latest-posts li {
+ul.post-list li {
   margin-top: calc(0.75 * var(--line-height));
   line-height: calc(0.7 * var(--line-height));
 }
 
-.latest-posts a:link {
+ul.post-list a:link {
   font-size: var(--body-font-size);
   color: var(--fontcolor);
 }
 
-.latest-posts a:hover, a:active {
+ul.post-list a:hover, a:active {
   color: var(--linkcolor);
 }
 
-.latest-posts .date {
+ul.post-list .date {
   display: block;
   font-size: var(--small-font-size);
   color: var(--fontcoloralt);
   transition: color 0.2s ease-in-out;
 }
 
-.latest-posts a.internal-link {
-  font-size: var(--small-font-size);
-  line-height: calc(0.7 * var(--line-height));
-}
-
 /* blog */
-
-
 header a {
   font-size: calc(0.9 * var(--small-font-size));
 }
