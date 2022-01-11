@@ -5,11 +5,11 @@
   --fontcoloralt: rgb(88, 88, 90);
   --linkcolor: #e33;
   --bordercolor: rgb(230, 230, 230);
-  --body-font-size: 1.3rem;
-  --line-height: 2rem; 
-  --h1-font-size: 1.8rem; 
+  --body-font-size: 1.25rem;
+  --line-height: 1.75rem; 
+  --h1-font-size: 1.75rem; 
   --h2-font-size: 1.5rem; 
-  --small-font-size: 1.1rem; 
+  --small-font-size: 1rem; 
 }
 
 @media (prefers-color-scheme: dark) {
@@ -48,9 +48,7 @@ body {
 }
 
 h1 {
-  font-weight: normal;
   font-size: var(--h1-font-size);
-  letter-spacing: 1px;
   margin: 0;
   padding-bottom: calc(0.25 * var(--line-height));
   border-bottom: 1px solid var(--fontcoloralt);
@@ -58,15 +56,17 @@ h1 {
 }
 
 h2 {
-  font-weight: normal;
   font-size: var(--h2-font-size);
-  letter-spacing: 0.6px;
+  letter-spacing: 0.05em;
+  margin: calc(1.5 * var(--line-height)) 0 0 0;
 }
 
 p {
-  letter-spacing: 0.4px;
   color: var(--fontcolor);
   transition: color 0.2s ease-in-out;
+  line-height: calc(0.9 * var(--line-height));
+  font-size: var(--body-font-size);
+  letter-spacing: 0.01em;
 }
 
 a:link {
@@ -106,7 +106,9 @@ a:active {
 }
 
 .content {
-  max-width: 700px;
+  max-width: 650px;
+  width: 100%;
+  height: 100%;
   margin: 0px auto;
   padding: 40px 15px;
 }
