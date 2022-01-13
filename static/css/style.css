@@ -5,11 +5,21 @@
   --fontcoloralt: rgb(88, 88, 90);
   --linkcolor: #e33;
   --bordercolor: rgb(230, 230, 230);
-  --body-font-size: 1.25rem;
+  --body-font-size: 1.2rem;
   --line-height: 1.75rem; 
   --h1-font-size: 1.75rem; 
   --h2-font-size: 1.5rem; 
   --small-font-size: 1rem; 
+}
+
+@media (max-width: 650px) {
+  :root {
+    --body-font-size: 1.125rem;
+    --line-height: 1.575rem;
+    --h1-font-size: 1.625rem;
+    --h2-font-size: 1.375rem;
+    --small-font-size: 1rem;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,12 +53,15 @@
 /* general */
 body {
   font-family: Times, serif;
+  letter-spacing: 0.016em;
   margin: 0px;
   height: 100vh;
+  width: 100%;
 }
 
 h1 {
   font-size: var(--h1-font-size);
+  letter-spacing: 0.04em;
   margin: 0;
   padding-bottom: calc(0.25 * var(--line-height));
   border-bottom: 1px solid var(--fontcoloralt);
@@ -57,26 +70,24 @@ h1 {
 
 h2 {
   font-size: var(--h2-font-size);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   margin: calc(1.5 * var(--line-height)) 0 0 0;
 }
 
-p {
+p, li {
   color: var(--fontcolor);
   transition: color 0.2s ease-in-out;
-  line-height: calc(0.9 * var(--line-height));
   font-size: var(--body-font-size);
-  letter-spacing: 0.01em;
 }
 
 a:link {
   text-decoration: none;
   color: var(--fontcoloralt);
   transition: color 0.2s ease-in-out;
+  font-size: var(--small-font-size);
 }
 
 a:visited {
-  text-decoration: none;
   color: var(--fontcoloralt);
 }
 
@@ -88,6 +99,40 @@ a:hover {
 
 a:active {
   text-decoration: underline;
+  color: var(--linkcolor);
+}
+
+main h2 + p {
+  margin-top: calc(0.75 * var(--line-height));
+}
+
+main p, main li {
+  margin: var(--line-height) 0 0 0;
+  line-height: calc(0.9 * var(--line-height));
+}
+
+main li+li {
+  margin: calc(0.5 * var(--line-height)) 0 0 0;
+}
+
+main a:link {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  color: var(--fontcolor);
+  font-size: var(--body-font-size);
+}
+
+main a:visited {
+  color: var(--fontcolor);
+}
+
+main a:hover {
+  text-decoration-style: solid;
+  color: var(--linkcolor);
+}
+
+main a:active {
+  text-decoration-style: solid;
   color: var(--linkcolor);
 }
 
@@ -107,10 +152,9 @@ a:active {
 
 .content {
   max-width: 650px;
-  width: 100%;
   height: 100%;
   margin: 0px auto;
-  padding: 40px 15px;
+  padding: 40px 20px;
 }
 
 .toggle-bg {
@@ -151,10 +195,6 @@ a:active {
 /* header */
 header {
   margin: calc(1.5 * var(--line-height)) 0;
-}
-
-header a {
-  font-size: calc(0.9 * var(--small-font-size));
 }
 
 nav {
@@ -221,7 +261,7 @@ ul.post-list {
 
 ul.post-list li {
   margin-top: calc(0.75 * var(--line-height));
-  line-height: calc(0.7 * var(--line-height));
+  line-height: calc(0.9 * var(--line-height));
 }
 
 ul.post-list a:link {
@@ -241,9 +281,6 @@ ul.post-list .date {
 }
 
 /* blog */
-header a {
-  font-size: calc(0.9 * var(--small-font-size));
-}
 
 nav {
   margin-top: calc(0.25 * var(--line-height));
@@ -261,6 +298,7 @@ nav {
 }
 
 .blog-article-meta li {
+  font-size: var(--small-font-size);
   color: var(--fontcoloralt);
   transition: color 0.2s ease-in-out,
               border-color 0.2s ease-in-out;
