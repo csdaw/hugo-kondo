@@ -6,6 +6,7 @@
   --linkcolor: rgb(238, 51, 51);
   --bordercolor: rgb(230, 230, 230);
   --prebgcolor: rgb(240, 240, 240);
+  --prebgcolor2: rgb(225, 225, 225);
   --prescolor: rgb(3, 106, 6);
   --premcolor: rgb(0, 0, 205);
   --prekcolor: rgb(88, 92, 246);
@@ -38,6 +39,7 @@
     --linkcolor: rgb(238, 51, 51);
     --bordercolor: rgb(77, 77, 77);
     --prebgcolor: rgb(20, 20, 21);
+    --prebgcolor2: rgb(10, 10, 11);
     --prescolor: rgb(3, 106, 6);
     --premcolor: rgb(60, 60, 255);
     --prekcolor: rgb(88, 92, 246);
@@ -55,6 +57,7 @@
   --linkcolor: rgb(238, 51, 51);
   --bordercolor: rgb(77, 77, 77);
   --prebgcolor: rgb(20, 20, 21);
+  --prebgcolor2: rgb(10, 10, 11);
   --prescolor: rgb(3, 106, 6);
   --premcolor: rgb(60, 60, 255);
   --prekcolor: rgb(88, 92, 246);
@@ -72,6 +75,7 @@
     --linkcolor: rgb(238, 51, 51);
     --bordercolor: rgb(230, 230, 230);
     --prebgcolor: rgb(240, 240, 240);
+    --prebgcolor2: rgb(225, 225, 225);
     --prescolor: rgb(3, 106, 6);
     --premcolor: rgb(0, 0, 205);
     --prekcolor: rgb(88, 92, 246);
@@ -97,7 +101,6 @@ h1 {
   margin: 0;
   padding-bottom: calc(0.25 * var(--line-height));
   border-bottom: 1px solid var(--fontcoloralt);
-  transition: border-color 0.2s ease-in-out;
 }
 
 h2 {
@@ -108,14 +111,28 @@ h2 {
 
 p, li {
   color: var(--fontcolor);
-  transition: color 0.2s ease-in-out;
   font-size: var(--body-font-size);
+}
+
+p code {
+  background-color: var(--prebgcolor2);
+  padding: calc(0.1 * var(--line-height));
+}
+
+code {
+  font-size: calc(0.92 * var(--small-font-size));
+  line-height: calc(0.8 * var(--line-height));
+  background-color: var(--prebgcolor);
+}
+
+.highlight pre {
+  padding: calc(0.8 * var(--line-height));
+  overflow-x: scroll;
 }
 
 a:link {
   text-decoration: none;
   color: var(--fontcoloralt);
-  transition: color 0.2s ease-in-out;
   font-size: var(--small-font-size);
 }
 
@@ -126,7 +143,6 @@ a:visited {
 a:hover {
   text-decoration: underline;
   color: var(--linkcolor);
-  transition: all 0s ease-in-out;
 }
 
 a:active {
@@ -173,8 +189,6 @@ main a:active {
   min-height: 100vh;
   background: var(--bgcolor);
   color: var(--fontcolor);
-  transition: background-color 0.2s ease-in-out,
-              color 0.2s ease-in-out;
 }
 
 #dark-mode-toggle:checked ~ .outer {
@@ -197,7 +211,6 @@ main a:active {
   border-radius: 20px;
   background: var(--fontcoloralt);
   align-items: center;
-  transition: background-color 0.2s ease-in-out;
 }
 
 #dark-mode-toggle:checked ~ .outer .toggle-bg {
@@ -210,7 +223,6 @@ main a:active {
   margin-left: 3px;
   border-radius: 50%;
   background: var(--bgcolor);
-  transition: all 0.2s ease;
 }
 
 #dark-mode-toggle:checked ~ .outer .toggle-circle {
@@ -257,7 +269,6 @@ nav {
   border-right-color: var(--fontcolor);
   border-right-style: solid;
   border-right-width: 1px;
-  transition: border-color 0.2s ease-in-out;
 }
 
 /* footer */
@@ -271,7 +282,6 @@ footer a {
 
 footer p {
   color: var(--fontcoloralt);
-  transition: color 0.2s ease-in-out;
 }
 
 /* homepage */
@@ -309,7 +319,6 @@ ul.post-list .date {
   display: block;
   font-size: var(--small-font-size);
   color: var(--fontcoloralt);
-  transition: color 0.2s ease-in-out;
 }
 
 /* blog */
@@ -332,8 +341,6 @@ nav {
 .blog-article-meta li {
   font-size: var(--small-font-size);
   color: var(--fontcoloralt);
-  transition: color 0.2s ease-in-out,
-              border-color 0.2s ease-in-out;
 }
 
 .blog-article-meta li:first-child {
