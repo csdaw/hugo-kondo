@@ -114,18 +114,17 @@ p, li {
   font-size: var(--body-font-size);
 }
 
+code {
+  font-size: calc(0.92 * var(--small-font-size));
+  line-height: calc(0.8 * var(--line-height));
+}
+
 p code {
   background-color: var(--prebgcolor2);
   padding: calc(0.1 * var(--line-height));
 }
 
-code {
-  font-size: calc(0.92 * var(--small-font-size));
-  line-height: calc(0.8 * var(--line-height));
-  background-color: var(--prebgcolor);
-}
-
-.highlight pre {
+pre {
   padding: calc(0.8 * var(--line-height));
   overflow-x: scroll;
 }
