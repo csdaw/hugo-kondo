@@ -3,8 +3,16 @@
   --bgcolor: rgb(250, 250, 250);
   --fontcolor: rgb(26, 26, 26);
   --fontcoloralt: rgb(88, 88, 90);
-  --linkcolor: #e33;
+  --linkcolor: rgb(238, 51, 51);
   --bordercolor: rgb(230, 230, 230);
+  --prebgcolor: rgb(240, 240, 240);
+  --prescolor: rgb(3, 106, 6);
+  --premcolor: rgb(0, 0, 205);
+  --prekcolor: rgb(88, 92, 246);
+  --preopcolor: rgb(104, 118, 135);
+  --preccolor: rgb(76, 136, 107);
+  --prelncolor: rgb(127, 127, 127);
+  --prehlcolor: rgb(255, 255, 204);
   --body-font-size: 1.2rem;
   --line-height: 1.75rem; 
   --h1-font-size: 1.75rem; 
@@ -27,8 +35,16 @@
     --bgcolor: rgb(30, 31, 32);
     --fontcolor: rgb(210, 210, 210);
     --fontcoloralt: rgb(166, 166, 166);
-    --linkcolor: #e33;
+    --linkcolor: rgb(238, 51, 51);
     --bordercolor: rgb(77, 77, 77);
+    --prebgcolor: rgb(20, 20, 21);
+    --prescolor: rgb(3, 106, 6);
+    --premcolor: rgb(60, 60, 255);
+    --prekcolor: rgb(88, 92, 246);
+    --preopcolor: rgb(170, 170, 170);
+    --preccolor: rgb(76, 136, 107);
+    --prelncolor: rgb(127, 127, 127);
+    --prehlcolor: rgb(48, 48, 22);
   }
 }
 
@@ -36,8 +52,16 @@
   --bgcolor: rgb(30, 31, 32);
   --fontcolor: rgb(210, 210, 210);
   --fontcoloralt: rgb(166, 166, 166);
-  --linkcolor: #e33;
+  --linkcolor: rgb(238, 51, 51);
   --bordercolor: rgb(77, 77, 77);
+  --prebgcolor: rgb(20, 20, 21);
+  --prescolor: rgb(3, 106, 6);
+  --premcolor: rgb(60, 60, 255);
+  --prekcolor: rgb(88, 92, 246);
+  --preopcolor: rgb(170, 170, 170);
+  --preccolor: rgb(76, 136, 107);
+  --prelncolor: rgb(127, 127, 127);
+  --prehlcolor: rgb(48, 48, 22);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,8 +69,16 @@
     --bgcolor: rgb(250, 250, 250);
     --fontcolor: rgb(26, 26, 26);
     --fontcoloralt: rgb(88, 88, 90);
-    --linkcolor: #e33;
+    --linkcolor: rgb(238, 51, 51);
     --bordercolor: rgb(230, 230, 230);
+    --prebgcolor: rgb(240, 240, 240);
+    --prescolor: rgb(3, 106, 6);
+    --premcolor: rgb(0, 0, 205);
+    --prekcolor: rgb(88, 92, 246);
+    --preopcolor: rgb(104, 118, 135);
+    --preccolor: rgb(76, 136, 107);
+    --prelncolor: rgb(127, 127, 127);
+    --prehlcolor: rgb(255, 255, 204);
   }
 }
 
