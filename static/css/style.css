@@ -97,7 +97,7 @@ body {
 
 h1 {
   font-size: var(--h1-font-size);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   margin: 0;
   padding-bottom: calc(0.25 * var(--line-height));
   border-bottom: 1px solid var(--fontcoloralt);
@@ -105,7 +105,7 @@ h1 {
 
 h2 {
   font-size: var(--h2-font-size);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   margin: calc(1.5 * var(--line-height)) 0 0 0;
 }
 
