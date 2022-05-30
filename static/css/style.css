@@ -273,6 +273,9 @@ nav {
 /* footer */
 footer {
   margin: calc(2.5 * var(--line-height)) 0 0 0;
+  padding-top: calc(1.5 * var(--line-height));
+  border-top: 1px solid var(--bordercolor);
+  
 }
 
 footer a {
