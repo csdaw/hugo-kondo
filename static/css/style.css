@@ -355,3 +355,12 @@ nav {
   border-right-style: solid;
   border-right-width: 1px;
 }
+
+/* footnotes */
+.footnotes p, li, main a:link {
+  font-size: var(--small-font-size);
+}
+
+.footnotes hr {
+  display: none;
+}
