@@ -1,6 +1,6 @@
 <header>
   <h1>{{ .Title }}</h1>
-  <div class="blog-article-meta">
+  <nav>
     <ul>
       {{ with .Params.author }}<li class="blog-author"><a href="/about/">{{ . }}</a></li>{{ end }}
       {{ if .Params.date }}<li><span class="blog-date">{{ $.Date.Format "2 January 2006" }}</span></li>{{ end }}
@@ -15,5 +15,5 @@
         </li>
       {{ end }}
     </ul>
-  </div>
+  </nav>
 </header>

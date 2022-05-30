@@ -1,19 +1,23 @@
 {{ define "main" }}
 {{ partial "header" . }}
 
-{{ .Content }}
-
-<div class="latest-posts">
-  <h2>Latest posts</h2>
-  <ul class="post-list">
-    {{ range first 3 (where .Site.RegularPages "Section" "!=" "") }}
-    <li>
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
-      <span class="date">{{ .Date.Format "2 January 2006" }}</span>
-    </li>
-    {{ end }}
-  </ul>
-  <a href="/blog/" class="internal-link">All posts →</a>
-</div>
+<main>
+  {{ .Content }}
+  
+  <div class="latest-posts">
+    <h2>Latest posts</h2>
+    <ul class="post-list">
+      {{ range first 3 (where .Site.RegularPages "Section" "!=" "") }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <span class="date">{{ .Date.Format "2 January 2006" }}</span>
+      </li>
+      {{ end }}
+      <li>
+        <a href="/blog/" class="internal-link">All posts →</a>
+      </li>
+    </ul>
+  </div>
+</main>
 
 {{ end }}

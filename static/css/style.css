@@ -1,4 +1,4 @@
-/* light/dark mode colours */
+/* variables */
 :root {
   --bgcolor: rgb(250, 250, 250);
   --fontcolor: rgb(26, 26, 26);
@@ -86,106 +86,29 @@
   }
 }
 
-/* general */
-body {
+/* general page setup */
+html {
   font-family: Times, serif;
   letter-spacing: 0.016em;
+}
+
+body {
   margin: 0px;
   height: 100vh;
   width: 100%;
 }
 
-h1 {
-  font-size: var(--h1-font-size);
-  letter-spacing: 0.03em;
-  margin: 0;
-  padding-bottom: calc(0.25 * var(--line-height));
-  border-bottom: 1px solid var(--fontcoloralt);
+.body-box {
+  max-width: 650px;
+  height: 100%;
+  margin: 0px auto;
+  padding: calc(3 * var(--line-height)) 0;
 }
 
-h2 {
-  font-size: var(--h2-font-size);
-  letter-spacing: 0.03em;
-  margin: calc(1.5 * var(--line-height)) 0 0 0;
-}
-
-p, li {
-  color: var(--fontcolor);
-  font-size: var(--body-font-size);
-}
-
-code {
-  font-size: calc(0.92 * var(--small-font-size));
-  line-height: calc(0.8 * var(--line-height));
-}
-
-p code {
-  background-color: var(--prebgcolor2);
-  padding: calc(0.1 * var(--line-height));
-}
-
-pre {
-  padding: calc(0.8 * var(--line-height));
-  overflow-x: scroll;
-}
-
-a:link {
-  text-decoration: none;
-  color: var(--fontcoloralt);
-  font-size: var(--small-font-size);
-}
-
-a:visited {
-  color: var(--fontcoloralt);
-}
-
-a:hover {
-  text-decoration: underline;
-  color: var(--linkcolor);
-}
-
-a:active {
-  text-decoration: underline;
-  color: var(--linkcolor);
-}
-
-main h2 + p {
-  margin-top: calc(0.75 * var(--line-height));
-}
-
-main p, main li {
-  margin: var(--line-height) 0 0 0;
-  line-height: calc(0.9 * var(--line-height));
-}
-
-main li+li {
-  margin: calc(0.5 * var(--line-height)) 0 0 0;
-}
-
-main a:link {
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  color: var(--fontcolor);
-  font-size: var(--body-font-size);
-}
-
-main a:visited {
-  color: var(--fontcolor);
-}
-
-main a:hover {
-  text-decoration-style: solid;
-  color: var(--linkcolor);
-}
-
-main a:active {
-  text-decoration-style: solid;
-  color: var(--linkcolor);
-}
-
-/* light/dark mode toggle */
+/* dark mode */
 .outer {
   min-height: 100vh;
+  width: 100%;
   background: var(--bgcolor);
   color: var(--fontcolor);
 }
@@ -193,13 +116,6 @@ main a:active {
 #dark-mode-toggle:checked ~ .outer {
   background: var(--bgcolor);
   color: var(--fontcolor);
-}
-
-.content {
-  max-width: 650px;
-  height: 100%;
-  margin: 0px auto;
-  padding: 40px 20px;
 }
 
 .toggle-bg {
@@ -235,36 +151,70 @@ main a:active {
   display: none;
 }
 
+/* main i.e. the actual content */
+main * {
+  margin: var(--line-height) 0 0 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 0.03em;
+}
+
+p, li {
+  font-size: var(--body-font-size);
+}
+
+sup, sub {
+  font-size: calc(0.9 * var(--small-font-size));
+}
+
+a {
+  color: var(--fontcolor);
+  text-decoration-style: dotted;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-style: solid;
+  color: var(--linkcolor);
+}
+
 /* header */
-header {
-  margin: calc(1.5 * var(--line-height)) 0;
+header h1 {
+  font-size: var(--h1-font-size);
+  line-height: 1.1;
+  margin: 0;
+  padding-bottom: calc(0.25 * var(--line-height));
+  border-bottom: 1px solid var(--fontcolor);
 }
 
 nav {
   margin-top: calc(0.25 * var(--line-height));
 }
 
-.navbar ul {
+nav ul {
   display: flex;
   list-style-type: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-.navbar li {
-  display: border-box;
+nav a, nav li {
   color: var(--fontcoloralt);
+  font-size: var(--small-font-size);
+  text-decoration: none;
 }
 
-.navbar li:first-child {
+nav li:first-child {
   padding: 0 calc(0.18 * var(--line-height)) 0 0;
 }
 
-.navbar li:not(:first-child) {
+nav li:not(:first-child) {
   padding: 0 calc(0.18 * var(--line-height));
 }
 
-.navbar li:not(:last-child) {
+nav li:not(:last-child) {
   border-right-color: var(--fontcolor);
   border-right-style: solid;
   border-right-width: 1px;
@@ -275,95 +225,32 @@ footer {
   margin: calc(2.5 * var(--line-height)) 0 0 0;
   padding-top: calc(1.5 * var(--line-height));
   border-top: 1px solid var(--bordercolor);
-  
 }
 
 footer a {
   margin-right: calc(0.25 * var(--line-height));
-}
-
-footer p {
   color: var(--fontcoloralt);
+  text-decoration: none;
 }
 
-/* homepage */
-.latest-posts h2 {
-  margin: calc(2.5 * var(--line-height)) 0 0 0;
-  font-size: var(--h2-font-size);
+/* home page */
+.latest-posts ul, .latest-posts a {
+  list-style: none;
+  text-decoration: none;
+}
+
+.latest-posts a:hover {
+  text-decoration: underline;
+}
+
+.latest-posts .date {
+  display: block;
+  margin-top: calc(0.36 * var(--line-height));
+  font-size: var(--small-font-size);
+  color: var(--fontcoloralt);
 }
 
 .latest-posts a.internal-link {
   font-size: var(--small-font-size);
-  line-height: calc(0.7 * var(--line-height));
-}
-
-ul.post-list {
-  list-style: none;
-  padding-left: 0px;
-  margin: 0 0 var(--line-height) 0;
-}
-
-ul.post-list li {
-  margin-top: calc(0.75 * var(--line-height));
-  line-height: calc(0.9 * var(--line-height));
-}
-
-ul.post-list a:link {
-  font-size: var(--body-font-size);
-  color: var(--fontcolor);
-}
-
-ul.post-list a:hover, a:active {
-  color: var(--linkcolor);
-}
-
-ul.post-list .date {
-  display: block;
-  font-size: var(--small-font-size);
   color: var(--fontcoloralt);
-}
-
-/* blog */
-
-nav {
-  margin-top: calc(0.25 * var(--line-height));
-}
-
-.blog-article-meta {
-  margin-top: calc(0.25 * var(--line-height));
-}
-
-.blog-article-meta ul {
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.blog-article-meta li {
-  font-size: var(--small-font-size);
-  color: var(--fontcoloralt);
-}
-
-.blog-article-meta li:first-child {
-  padding: 0 calc(0.18 * var(--line-height)) 0 0;
-}
-
-.blog-article-meta li:not(:first-child) {
-  padding: 0 calc(0.18 * var(--line-height));
-}
-
-.blog-article-meta li:not(:last-child) {
-  border-right-color: var(--fontcolor);
-  border-right-style: solid;
-  border-right-width: 1px;
-}
-
-/* footnotes */
-.footnotes p, li, main a:link {
-  font-size: var(--small-font-size);
-}
-
-.footnotes hr {
-  display: none;
 }
