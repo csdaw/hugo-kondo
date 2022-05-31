@@ -1,17 +1,21 @@
 {{ define "main" }}
 {{ partial "header" . }}
 
+<main>
 {{ .Content }}
 
 {{ if not .IsHome }}
-  <ul class="post-list">
-    {{ range (where .Data.Pages "Section" "!=" "") }}
-    <li>
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
-      <span class="date">{{ .Date.Format "2 January 2006" }}</span>
-    </li>
-    {{ end }}
-  </ul>
+  <div class="all-posts">
+    <ul class="post-list">
+      {{ range (where .Data.Pages "Section" "!=" "") }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <span class="date">{{ .Date.Format "2 January 2006" }}</span>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
 {{ end }}
+</main>
 
 {{ end }}

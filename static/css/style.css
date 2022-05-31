@@ -14,10 +14,11 @@
   --preccolor: rgb(76, 136, 107);
   --prelncolor: rgb(127, 127, 127);
   --prehlcolor: rgb(255, 255, 204);
-  --body-font-size: 1.2rem;
-  --line-height: 1.75rem; 
+  --body-font-size: 1.25rem;
+  --line-height: 1.7rem; 
   --h1-font-size: 1.75rem; 
   --h2-font-size: 1.5rem; 
+  --quote-font-size: 1.125rem;
   --small-font-size: 1rem; 
 }
 
@@ -89,7 +90,7 @@
 /* general page setup */
 html {
   font-family: Times, serif;
-  letter-spacing: 0.016em;
+  letter-spacing: 0.02em;
 }
 
 body {
@@ -152,13 +153,22 @@ body {
 }
 
 /* main i.e. the actual content */
+main {
+  margin: calc(1.5 * var(--line-height)) 0 0 0;
+}
+
 main * {
   margin: var(--line-height) 0 0 0;
   padding: 0;
+  line-height: var(--line-height);
 }
 
 h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.03em;
+}
+
+h2, h3 {
+  margin: calc(1.5 * var(--line-height)) 0 0 0;
 }
 
 p, li {
@@ -180,10 +190,20 @@ a:hover {
   color: var(--linkcolor);
 }
 
+ul, ol {
+  list-style-position: outside;
+  padding-left: var(--line-height);
+}
+
+main li+li, main ul li ul, main ul li ul li {
+  margin: calc(0.5 * var(--line-height)) 0 0 0;
+}
+
+
 /* header */
 header h1 {
   font-size: var(--h1-font-size);
-  line-height: 1.1;
+  line-height: calc(1.1 * var(--line-height));
   margin: 0;
   padding-bottom: calc(0.25 * var(--line-height));
   border-bottom: 1px solid var(--fontcolor);
@@ -243,9 +263,13 @@ footer a {
   text-decoration: underline;
 }
 
+.latest-posts li {
+  margin: var(--line-height) 0 0 0;
+}
+
 .latest-posts .date {
   display: block;
-  margin-top: calc(0.36 * var(--line-height));
+  margin-top: calc(0.18 * var(--line-height));
   font-size: var(--small-font-size);
   color: var(--fontcoloralt);
 }
@@ -253,4 +277,45 @@ footer a {
 .latest-posts a.internal-link {
   font-size: var(--small-font-size);
   color: var(--fontcoloralt);
+}
+
+/* blog index */
+.all-posts ul, .all-posts a {
+  list-style: none;
+  text-decoration: none;
+}
+
+.all-posts a:hover {
+  text-decoration: underline;
+}
+
+.all-posts li {
+  margin: var(--line-height) 0 0 0;
+}
+
+.all-posts .date {
+  display: block;
+  margin-top: calc(0.18 * var(--line-height));
+  font-size: var(--small-font-size);
+  color: var(--fontcoloralt);
+}
+
+/* block quotes */
+blockquote {
+  margin: var(--line-height) 0;
+  padding: 0 1.5em;
+}
+
+blockquote p {
+  font-size: var(--quote-font-size);
+  line-height: calc(0.8 * var(--line-height));
+}
+
+/* footnotes */
+.footnotes p, .footnotes li, .footnotes a:link {
+  font-size: var(--small-font-size);
+}
+
+.footnotes hr {
+  display: none;
 }
