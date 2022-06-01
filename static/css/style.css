@@ -103,7 +103,7 @@ body {
   max-width: 650px;
   height: 100%;
   margin: 0px auto;
-  padding: calc(3 * var(--line-height)) 0;
+  padding: calc(3 * var(--line-height)) calc(1.1 * var(--line-height))
 }
 
 /* dark mode */
