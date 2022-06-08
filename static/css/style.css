@@ -5,8 +5,7 @@
   --fontcoloralt: rgb(88, 88, 90);
   --linkcolor: rgb(238, 51, 51);
   --bordercolor: rgb(230, 230, 230);
-  --prebgcolor: rgb(240, 240, 240);
-  --prebgcolor2: rgb(225, 225, 225);
+  --prebgcolor: rgb(237, 237, 237);
   --prescolor: rgb(3, 106, 6);
   --premcolor: rgb(0, 0, 205);
   --prekcolor: rgb(88, 92, 246);
@@ -39,8 +38,7 @@
     --fontcoloralt: rgb(166, 166, 166);
     --linkcolor: rgb(238, 51, 51);
     --bordercolor: rgb(77, 77, 77);
-    --prebgcolor: rgb(20, 20, 21);
-    --prebgcolor2: rgb(10, 10, 11);
+    --prebgcolor: rgb(10, 10, 11);
     --prescolor: rgb(3, 106, 6);
     --premcolor: rgb(60, 60, 255);
     --prekcolor: rgb(88, 92, 246);
@@ -57,8 +55,7 @@
   --fontcoloralt: rgb(166, 166, 166);
   --linkcolor: rgb(238, 51, 51);
   --bordercolor: rgb(77, 77, 77);
-  --prebgcolor: rgb(20, 20, 21);
-  --prebgcolor2: rgb(10, 10, 11);
+  --prebgcolor: rgb(10, 10, 11);
   --prescolor: rgb(3, 106, 6);
   --premcolor: rgb(60, 60, 255);
   --prekcolor: rgb(88, 92, 246);
@@ -75,8 +72,7 @@
     --fontcoloralt: rgb(88, 88, 90);
     --linkcolor: rgb(238, 51, 51);
     --bordercolor: rgb(230, 230, 230);
-    --prebgcolor: rgb(240, 240, 240);
-    --prebgcolor2: rgb(225, 225, 225);
+    --prebgcolor: rgb(237, 237, 237);
     --prescolor: rgb(3, 106, 6);
     --premcolor: rgb(0, 0, 205);
     --prekcolor: rgb(88, 92, 246);
@@ -279,6 +275,10 @@ footer a {
   color: var(--fontcoloralt);
 }
 
+.latest-posts a:hover.internal-link {
+  color: var(--linkcolor);
+}
+
 /* blog index */
 .all-posts ul, .all-posts a {
   list-style: none;
@@ -318,4 +318,47 @@ blockquote p {
 
 .footnotes hr {
   display: none;
+}
+
+/* code blocks */
+pre {
+  background-color: var(--prebgcolor);
+  /* https://www.w3schools.com/cssref/pr_text_white-space.asp */
+  /* Preserve whitespace. Wrap text only at line breaks. */
+  /* So do NOT auto-wrap the code lines. */
+  white-space: pre;
+  overflow-x: auto;    /* Enable horizontal scroll bars (only for overflowing code) */
+  padding: calc(0.6 * var(--line-height));
+  border-width: 1px;
+  border-radius: 3px;
+  border-color: var(--bordercolor);
+  border-style: solid;
+}
+
+pre code {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.chroma * {
+  margin: 0;
+}
+
+.chroma tr td:first-child pre {
+  padding: calc(0.6 * var(--line-height)) calc(0.2 * var(--line-height));
+}
+
+.chroma tr td:last-child {
+  width: 100%;
+}
+
+/* inline code */
+code {
+  background-color: var(--prebgcolor);
+  border-width: 1px;
+  border-radius: 3px;
+  border-color: var(--bordercolor);
+  border-style: solid;
+  padding: calc(0.03 * var(--line-height)) calc(0.1 * var(--line-height));
 }
