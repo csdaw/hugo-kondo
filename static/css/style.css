@@ -6,7 +6,7 @@
   --linkcolor: rgb(238, 51, 51);
   --markbgcolor: rgb(250, 250, 157);
   --bordercolor: rgb(230, 230, 230);
-  --bordercolor2: rgb(240, 240, 240);
+  --bordercolor2: rgb(186, 186, 186);
   --asidebgcolor: rgb(224, 224, 224);
   --prebgcolor: rgb(237, 237, 237);
   --prescolor: rgb(3, 106, 6);
@@ -380,7 +380,7 @@ code {
   padding: calc(0.03 * var(--line-height)) calc(0.1 * var(--line-height));
 }
 
-/* custom aside class */
+/* aside styling */
 aside {
   background-color: var(--asidebgcolor);
   margin: calc(1.25 * var(--line-height)) 0;
@@ -397,4 +397,24 @@ aside p, aside a {
   margin: calc(0.3 * var(--line-height)) 0 0 0;
   line-height: calc(0.8 * var(--line-height));
   font-size: var(--small-font-size);
+}
+
+/* table styling */
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+  font-family: sans-serif;
+}
+
+th {
+  background-color: var(--asidebgcolor);
+  margin: 0;
+  padding: calc(0.08 * var(--line-height)) calc(0.2 * var(--line-height));
+  border: 1px solid var(--asidebgcolor);
+}
+
+td {
+  margin: 0;
+  padding: calc(0.2 * var(--line-height));
+  border: 1px solid var(--asidebgcolor);
 }
