@@ -4,6 +4,7 @@
   --fontcolor: rgb(26, 26, 26);
   --fontcoloralt: rgb(88, 88, 90);
   --linkcolor: rgb(238, 51, 51);
+  --markbgcolor: rgb(250, 250, 157);
   --bordercolor: rgb(230, 230, 230);
   --prebgcolor: rgb(237, 237, 237);
   --prescolor: rgb(3, 106, 6);
@@ -37,6 +38,7 @@
     --fontcolor: rgb(210, 210, 210);
     --fontcoloralt: rgb(166, 166, 166);
     --linkcolor: rgb(238, 51, 51);
+    --markbgcolor: rgb(84, 84, 32);
     --bordercolor: rgb(77, 77, 77);
     --prebgcolor: rgb(10, 10, 11);
     --prescolor: rgb(3, 106, 6);
@@ -54,6 +56,7 @@
   --fontcolor: rgb(210, 210, 210);
   --fontcoloralt: rgb(166, 166, 166);
   --linkcolor: rgb(238, 51, 51);
+  --markbgcolor: rgb(84, 84, 32);
   --bordercolor: rgb(77, 77, 77);
   --prebgcolor: rgb(10, 10, 11);
   --prescolor: rgb(3, 106, 6);
@@ -71,6 +74,7 @@
     --fontcolor: rgb(26, 26, 26);
     --fontcoloralt: rgb(88, 88, 90);
     --linkcolor: rgb(238, 51, 51);
+    --markbgcolor: rgb(250, 250, 157);
     --bordercolor: rgb(230, 230, 230);
     --prebgcolor: rgb(237, 237, 237);
     --prescolor: rgb(3, 106, 6);
@@ -195,6 +199,10 @@ main li+li, main ul li ul, main ul li ul li {
   margin: calc(0.5 * var(--line-height)) 0 0 0;
 }
 
+mark {
+  background-color: var(--markbgcolor);
+  color: var(--fontcolor);
+}
 
 /* header */
 header h1 {
